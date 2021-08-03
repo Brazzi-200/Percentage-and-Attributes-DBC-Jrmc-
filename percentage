@@ -1,0 +1,10 @@
+// 0.25 is porcentage = 25%
+           final NBTCompound forgeData = PowerNBT.getApi().readForgeData((Entity) player);
+           final NBTCompound playerPersisted = forgeData.getCompound("PlayerPersisted");
+           final int ki = playerPersisted.getInt("jrmcCncI") * 40; // 40 would be the value for checking the player's total energy and then doing 0.25x and thus giving the player's total ki value at 25%
+           final double kiMin = ki * 0.25;
+           final int currentki = playerPersisted.getInt("jrmcEnrgy"); // The "jrmcEnrgy" would be the value to know the current ki of the player 
+// Now, to use this, you would use an "if" to check whether or not the player has less or more than 25% ki 
+            if (currentki >= kiMinimo) {
+            (your action)
+            }
